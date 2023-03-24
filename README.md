@@ -29,9 +29,9 @@ In order to run this project, we need to follow some few steps :
 
 #### 1. Architecture
 <p align="center">
-<img src="/_other/architecture.png" alt="Kerberos logo" width="420" height="270" />
+<img src="/_other/architecture.png" alt="Kerberos logo" width="390" height="250" />
   &nbsp;&nbsp;
-<img src="/_other/architecture2.png" alt="Kerberos logo" width="420" height="270" />
+<img src="/_other/architecture2.png" alt="Kerberos logo" width="390" height="250" />
 </p>
 
 
