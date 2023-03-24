@@ -1,0 +1,25 @@
+Here's a step-by-step breakdown of what happens during each of these steps:
+
+The client requests a service ticket from the KDC:
+
+1 - The client sends a Kerberos AS-REQ message to the KDC, requesting a service ticket for the PostgreSQL service principal. The message includes the client's TGT and the name of the service principal it wants to authenticate to (in this case, the PostgreSQL service principal).
+	The KDC receives the AS-REQ message and checks the client's TGT to ensure that it is valid and has not expired.
+	The KDC generates a session key for the client and encrypts it with the TGT's key, creating a service ticket for the PostgreSQL service principal.
+	The KDC sends a Kerberos AS-REP message back to the client, containing the service ticket and the session key.
+	The client uses the session key to encrypt an AP-REQ message and sends it to the PostgreSQL service:
+
+2 - The client receives the AS-REP message from the KDC and extracts the session key and the service ticket.
+	The client uses the session key to encrypt an AP-REQ message and sends it to the PostgreSQL service. The AP-REQ message includes the service ticket and the name of the client's principal.
+	The PostgreSQL service receives the AP-REQ message and decrypts it using its own keytab file:
+
+3 - The PostgreSQL service receives the AP-REQ message and extracts the service ticket and the client's principal name.
+	The PostgreSQL service searches its keytab file for an entry that matches the service principal name and contains the encryption keys needed to decrypt the service ticket.
+	If a matching entry is found, the PostgreSQL service decrypts the service ticket using the encryption keys from the keytab file.
+	If the decryption is successful, the PostgreSQL service sends an AP-REP message back to the client:
+
+4 - If the decryption is successful, the PostgreSQL service generates a session key for the client and encrypts it using the session key from the service ticket.
+	The PostgreSQL service sends an AP-REP message back to the client, containing the session key encrypted using the client's session key.
+	The client receives the AP-REP message and decrypts it using the session key:
+
+5 - The client receives the AP-REP message from the PostgreSQL service and extracts the session key.
+	The client decrypts the session key using the session key from the
