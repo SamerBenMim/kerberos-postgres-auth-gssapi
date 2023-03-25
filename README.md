@@ -18,8 +18,7 @@ In order to run this project, we need to follow some few steps :
 * Make sure you have 3 linux machines with the **Ubuntu 20.04 LTS distribution**  ( [Download Here](https://ubuntu.com/download/desktop)).
 * Make sure you have **postgresql** on the server and client machine.
 ```bash
-  sudo apt
-  update
+  sudo apt update
   sudo apt-get install Postgresql postgresql-contrib
 ``` 
 
