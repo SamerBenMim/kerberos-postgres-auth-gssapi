@@ -369,6 +369,6 @@ A list of resources which are helpful and would like to give credit to:
 * [Kerberos docs](https://web.mit.edu/kerberos/krb5-latest/doc/)
 * [Postgresql with KRB](https://www.postgresql.org/docs/current/gssapi-auth.html)
 
-* [Useful video tutorial TECHWALL](https://www.youtube.com/watch?v=vx2vIA2Ym14)
+* [TECHWALL : Useful video tutorial](https://www.youtube.com/watch?v=vx2vIA2Ym14)
 
 
