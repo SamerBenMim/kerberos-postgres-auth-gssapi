@@ -166,7 +166,7 @@ We create also a principal for the service server
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 #### 6. Configure Service Server Machine
-*### Configuration of Kerberos*
+### Configuration of Kerberos*
 
 6.1. We need to install **the packages** _krb5-user_, _libpam-krb5_ and _libpam-ccreds_ by running: 
 ```bash
